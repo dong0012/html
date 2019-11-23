@@ -1,0 +1,9 @@
+{
+    "powermode.enabled":true,
+"powermode.enableShake": false,
+
+"powermode.presets": "particles",
+
+"powermode.enableShake": false,//这个代表桌面是否震动
+"powermode.presets": "particles",//这个是样式
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 定时函数
+    // window.setTimeout(function(){
+    //     alert("时间到了")
+    // },1000)    //回调函数    1000是以毫秒为单位的    只执行一次
+    var num=10
+    var timer=window.setInterval(function(){
+        console.log(num);        //每隔一秒执行一次
+        num--;
+        if(num==0){
+            clearInterval(timer)
+        }
+    },1000)
+    var timer2=setInterval(function(){
+        console.log("hello");     
+        clearInterval(timer2)
+    },1000)
+    </script>
+</body>
+</html>
