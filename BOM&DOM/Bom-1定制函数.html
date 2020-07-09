@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //var num=alert();
+    // var a=confirm();
+    // prompt()
+    //bom浏览器提供的方法，
+
+    // window.setTimeout(function(){  //只执行一次
+    //     alert("时间到了")
+    // },3000)//先传递匿名函数，再写时间，时间为毫秒单位
+
+    //定时函数
+    // window.setInterval(function(){    //重复执行
+    //     console.log("hello");
+    // },1000)
+
+    var num=10;      //定制函数停止   clear...
+    var timer=window.setInterval(function(){    //每一个setInterval和setTimeout都有一个返回值
+        console.log(num);
+        num--;
+        if(num==0){
+            clearInterval(timer)//传递唯一标识
+        }
+    },1000)
+    var timer2=setInterval(function(){
+        console.log("hello");
+        
+    },1000)
+    </script>
+</body>
+</html>

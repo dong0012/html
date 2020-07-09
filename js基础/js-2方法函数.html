@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    //引用数据类型
+    //数组
+    var arr = ["xiaoming","小红","xiaowang","xiaoli"];
+    var arr2=[1,2,3,4];
+    console.log(arr[1]);
+    var arr3=[1,2,3,4,["a","b","c","4"]];
+    console.log(arr3[4][1]);
+    
+    
+    //对象
+    var person={
+        name:"xiaoming",
+        age:20,
+        speak:function(){     //定义方法  
+            console.log("hello");
+            
+        }
+    }
+    console.log(person.name);
+    person.speak();  //方法执行必须加括号
+    
+    var foo=function(str){
+        console.log(str);
+    }
+    foo("abc")
+    //方法
+    function foo(str,str2,str3){    //定义的方法 foo为函数名，形式参数
+
+         console.log(str,str2,str3)
+    }
+    //调用函数
+    foo("吃饭","吃面条","吃玉米")  //调用foo，实际参数
+    </script>
+</body>
+</html>

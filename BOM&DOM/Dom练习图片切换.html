@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        width: 600px;
+        margin: 100px auto;
+        border: 1px solid #ddd;
+    }
+    .top{
+        height: 225px;
+        text-align: center;
+    }
+    .top img{
+        height: 220px;
+    }
+    .bottom{
+        border-top: 1px solid #ddd;
+        height: 125px;
+    }
+    .slider-item{
+        float: left;
+        width: 149px;
+        border-right: 1px solid #ddd;
+        text-align: center;
+    }
+    .slider-item img{
+        width: 120px;
+    }
+    .slider-item:last-child{
+        border-right: none;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="top">
+            <img id="big-img" src="./picture/8.jpg" alt="">
+        </div>
+        <div class="bottom">
+            <div class="slider-item">
+                <img src="./picture/8.jpg" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="./picture/9.jpg" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="./picture/10.jpg" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="./picture/11.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+    var aImg=document.getElementsByClassName("bottom")[0].getElementsByTagName("img");
+    var oImg=document.getElementById("big-img")
+    for(var i=0;i<aImg.length;i++){
+        aImg[i].onmouseover=function(){
+            var thisScr=this.getAttribute("src");
+            oImg.setAttribute("src",thisScr)
+        }
+    }
+    // aImg[0].onmouseover=function(){
+    //     var thisScr=this.getAttribute("src");
+    //     oImg.setAttribute("src",thisSrc);
+    // }
+    // aImg[1].onmouseover=function(){
+    //     var thisSrc=this.getAttribute("src");
+    //     oImg.setAttribute("src",thisSrc);
+    // }
+    // aImg[2].onmouseover=function(){
+    //     var thisSrc=this.getAttribute("src");
+    //     oImg.setAttribute("src",thisSrc);
+    // }
+    // aImg[3].onmouseover=function(){
+    //     var thisSrc=this.getAttribute("src");
+    //     oImg.setAttribute("src",thisSrc);
+    // }
+    </script>
+</body>
+</html>

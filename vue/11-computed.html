@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="addHandle">add</button>
+        <p>{{sum}}</p>
+        <p>{{textsum}}</p>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                sum:0,
+                // textsum:0
+            },
+            methods:{
+                addHandle(){
+                    this.sum++;
+                    // this.textsum=this.sum+1
+                }
+            },
+            computed:{
+                textsum(){    //computer下的表示函数
+                    return this.sum+1;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

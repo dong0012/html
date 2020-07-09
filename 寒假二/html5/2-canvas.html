@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  #can{
+    background-color: black;
+
+  }
+  </style>
+</head>
+<body>
+  <canvas id="can"></canvas>    <!--画板  -->
+  <script>
+  var ocan=document.getElementById("can");
+  var context=ocan.getContext("2d");
+  context.strokeStyle="red";
+  context.beginPath();//开始画画
+  context.moveTo(100,100);//笔开始的位置
+  context.lineTo(300,300);//结束的位置
+  context.stroke();
+  
+  </script>
+</body>
+</html>

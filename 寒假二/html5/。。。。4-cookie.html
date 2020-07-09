@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button id="add">add</button>
+  <button id="print">print</button>
+  <script>
+    var timer=new Date();  //获取当前时间
+    // timer.getDate()+1   //当前时间加1
+    // timer.setDate()//设置当前时间
+    timer.setDate(timer.getDate()+1)
+    //通过属性设置cookie
+    document.cookie="dongdong=12;expires="+timer.toUTCString();    //此后加字符串格式  toUTCString()将时间转换为字符串模式
+    console.log(document.cookie);
+    setCookie("fellow","37",1)      //表示一天后过期
+    getCookie("fellow") //37
+    delCookie("fellow")   //删除
+
+
+
+  //  var num=0;
+  //  var oAdd=document.querySelector("#add");
+  //  var oPrint=document.querySelector("#print");
+  //  oAdd.onclick=function(){
+  //    num++;
+  //  }
+  //  oPrint.onclick=function(){
+  //    console.log(num)
+  //  }
+  </script>
+</body>
+</html>

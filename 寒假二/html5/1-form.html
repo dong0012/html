@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 表单元素   表单提交相当于异步提交-->
+    <form action="xxx.php">
+      <input type="text" name="uesername" autocomplete="off" autofocus placeholder="输入用户名">    <!--输入框autofocus直接选中文本框    placeholder  增加提示内容-->
+      <input type="date" name="" id=""><!--出现年月日并且可以进行选择日期  -->
+      <input type="email" name="" id="">    <!--只能输入电子邮件类型-->
+      <input type="url" name="" id="">     <!--只能输入整数类型-->
+      <input type="number" name="" id="" max="10" min="0" step="2">   <!--只能输入整数类型 可以控制最大值和最小值  调节每次改变值-->
+      <input type="range" name="" id="" max="100" min="50">  
+      
+      <input type="submit" value="提交">   <!--提交按钮-->
+      <input type="color">   <!--调整颜色-->
+      <input type="text" list="testlist">
+      <datalist id="testlist">    <!--可以生成下拉列表 可选中，可编辑，并且具有提示效果-->
+        <option value="baidu">baidu</option>
+        <option value="taobao">taobao</option>
+      </datalist>
+      <audio controls autoplay src=""></audio>   <!--音频-->
+      <video controls src=""></video>    <!--视频-->
+    </form>
+</body>
+</html> 
