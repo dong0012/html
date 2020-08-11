@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <com1 v-bind:username.sync="studentName"></com1>
+        <!--v-bind使属性以变量形式接收-->
+
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                studentName: "小刚"
+            },
+            methods: {
+                // changeName(newName){
+                //     console.log(newName);
+                //     this.studentName=newName
+                // }
+            },
+            components: {
+                com1: {
+                    props: ['username'],    //一定要通过props先进行定义实现传参接收   父组件传递的要接受，相当于继承
+                    data() {         //组件内部使用data一定要是方法形式
+                        return {
+                            num:0
+                        }
+                    },
+                    template: `     
+                    <div>
+                        <h1>hello{{username}}</h1>
+                        <button @click="showProps">show</button>
+                    </div>
+                `   ,  //模板字符串
+
+                    methods: {
+                        showProps() {
+                            console.log(this.username)
+                            console.log(this.num);
+                            this.$emit("update:username","小明")
+                        }
+                    },
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+      <!-- computed和watch两种实现的形式一眼，但是使用方式computed更简单 -->
+<body>
+    <div id="app">
+        {{fullName}}
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                firstName: 'Foo',
+                lastName: 'Bar',
+                fullName:'Foo Bar'
+            },
+            watch: {
+                
+                firstName:function(val, oldVal){
+                    // console.log();
+                    this.fullName=val+''+this.lastName
+                },
+                lastName:function(val,oldVal){
+                    this.fullName=this.firstName+' '+val;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

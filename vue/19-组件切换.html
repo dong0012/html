@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <div v-bind:is="witchCom"></div> -->
+        <div @click></div>
+    </div>
+    <template id="com1">
+        <div>
+            hello
+        </div>
+    </template>
+    <template id="com2">
+        <div>
+            world
+        </div>
+    </template>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                witchCom:"com1"
+            },
+            components:{
+                com1:{
+                    template:"#com1"
+                },
+                com2:{
+                    template:"#com2"
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

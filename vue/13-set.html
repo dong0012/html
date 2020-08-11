@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="val in arr">{{val}}</li>
+        </ul>
+        <button @click="changeHandle">change</button>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            arr:[1,2,3,4,5],
+            object:{
+                
+            }
+        },
+        methods:{
+            changeHandle(){
+                // let newArr=[...this.arr];
+                // newArr[1]="a";
+                // this.arr=newArr;
+                // console.log(this.arr);
+                
+                Vue.set(this.arr,1,'a')    //利用set修改值
+
+                 
+            }
+        }
+    })
+</script>
+</html>

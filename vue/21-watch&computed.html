@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,26 @@
     <title>Document</title>
     <script src="./js/vue.js"></script>
 </head>
+
 <body>
     <div id="app">
-        <div id="box" v-fellow="test" >hello</div>
+        {{fullName}}
     </div>
     <script>
-        Vue.directive("fellow",{
-            inserted(el,binding,vnode){
-                console.log(el,binding,vnode);
-                el.style.color=binding.value
-                
+        new Vue({
+            el: '#app',
+            data: {
+                firstName: 'Foo',
+                lastName: 'Bar',
+
+            },
+            computed: {
+                fullName: function () {
+                    return this.firstName + ' ' + this.lastName
+                },
             }
         })
-    new Vue({
-        el:"#app",
-        data:{
-            test:"blue"
-        }
-    })
     </script>
 </body>
+
 </html>

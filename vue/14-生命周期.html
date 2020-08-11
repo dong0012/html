@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- <button v-on:click="clickHandle">add</button> -->
+        <button @click="clickHandle">add</button>
+        <p>{{num}}</p>
+    </div>
+    <script>
+    new Vue({
+        el:"#app",
+        data:{
+            num:0
+        },
+        methods: {
+            clickHandle(){
+                console.log(this.num);  
+                this.num++;
+            }
+        },
+        beforeCreate(){    //再没执行之前
+            console.log('beforeCreate');  
+            
+        },
+        created(){     //创建
+            console.log('created');
+        },
+        beforeMount() {    //挂载
+            console.log('beforeMount');
+            
+        },
+        mounted(){
+            console.log('mounted');
+        },
+        beforeUpdate(){    //修改
+            console.log('beforeUpdate');
+        },
+        update(){
+            console.log('update');
+        },
+        beforeDestory(){    //摧毁
+            console.log('beforeDestroy')
+                
+            
+        },
+        destroyed(){
+            console.log('destroyed');
+        },
+        
+    })
+    </script>
+</body>
+</html>
